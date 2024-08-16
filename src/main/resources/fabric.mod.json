@@ -1,0 +1,38 @@
+{
+	"schemaVersion": 1,
+	"id": "regionrestrict",
+	"version": "${version}",
+	"name": "RegionRestrict",
+	"description": "Control player access to specific zones or regions",
+	"authors": [
+		"Vianny-web"
+	],
+	"contact": {
+	},
+	"license": "MIT",
+	"icon": "assets/regionrestrict/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.vianny.region_restrict.RegionRestrict"
+		],
+		"client": [
+			"com.vianny.region_restrict.RegionRestrictModClient"
+		],
+		"fabric-datagen": [
+			"com.vianny.region_restrict.RegionRestrictDataGenerator"
+		]
+	},
+	"mixins": [
+		"regionrestrict.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.15.6",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
